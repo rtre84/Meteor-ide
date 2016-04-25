@@ -1,0 +1,64 @@
+<template name="ProjectsMain">
+	<div id="wrap">
+		<div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+			<div class="navbar-container container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="sr-only">
+							Toggle navigation
+						</span>
+						<span class="icon-bar">
+						</span>
+						<span class="icon-bar">
+						</span>
+						<span class="icon-bar">
+						</span>
+					</button>
+					<a class="navbar-brand" id="page-back-button" title="back" href="#">
+						<span class="fa fa-chevron-left">
+						</span>
+					</a>
+					<a class="navbar-brand" id="page-title" href="#">
+						{{project.name}}
+					</a>
+				</div>
+				<div id="menu" class="collapse navbar-collapse">
+					{{> ProjectsMainLeftMenu}}{{> ProjectsMainRightMenu}}
+				</div>
+			</div>
+		</div>
+		<div class="navbar-spacer">
+		</div>
+		<div id="content" class="page-container container-fluid">
+			<div id="title_row">
+			</div>
+			<div id="subcontent">
+				{{> yield region='ProjectsMainSubcontent'}}
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+		<div class="footer-container container-fluid">
+			<p class="text-muted">
+			</p>
+		</div>
+	</div>
+</template>
+
+<template name="ProjectsMainLeftMenu">
+	<ul id="menu-items" class="nav navbar-nav">
+		<li id="menu-item-simple" class="{{menuItemClass 'projects.main.editor'}}">
+			<a href="{{pathFor 'projects.main.editor' projectId=this.params.projectId fileId=this.params.fileId}}">
+				<span class="item-title">
+					Editor
+				</span>
+			</a>
+		</li>
+	</ul>
+</template>
+
+<template name="ProjectsMainRightMenu">
+	<ul id="menu-items" class="nav navbar-nav navbar-right">
+	</ul>
+</template>
+
