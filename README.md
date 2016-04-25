@@ -1,5 +1,7 @@
-Example IDE
-===========
+Meteor JS Powered Example IDE
+=======================
+
+**NOTE**: This project is very much in development. Looking to tie it in with Docker containers so code can be executed safely for a couple of my favourite less popular languages. Not that the world absolutely needs another ide but building one is way too much fun.
 
 This input file for <a href="http://www.meteorkitchen.com" target="_blank">Meteor Kitchen</a> will build meteor application - minimalistic IDE.
 
